@@ -10,9 +10,9 @@ namespace StarWarsTradingCardCollectionAPI.Models
             Card = new HashSet<Card>();
         }
 
-        public int SeriesId { get; set; }
+        public Guid SeriesId { get; set; }
         public string SeriesName { get; set; }
-        public int? SetId { get; set; }
+        public Guid? SetId { get; set; }
 
         public virtual Set Set { get; set; }
         public virtual ICollection<Card> Card { get; set; }

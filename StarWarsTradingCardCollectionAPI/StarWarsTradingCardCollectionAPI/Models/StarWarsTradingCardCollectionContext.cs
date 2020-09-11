@@ -27,9 +27,9 @@ namespace StarWarsTradingCardCollectionAPI.Models
             {
                 entity.ToTable("Card", "Cards");
 
-                entity.HasIndex(e => new { e.CardNo, e.SeriesId })
-                    .HasName("uq_Card")
-                    .IsUnique();
+                entity.Property(e => e.CardId)
+                    .HasColumnName("CardID")
+                    .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.CardName).HasMaxLength(100);
 
@@ -38,10 +38,11 @@ namespace StarWarsTradingCardCollectionAPI.Models
                     .HasMaxLength(10)
                     .IsUnicode(false);
 
+                entity.Property(e => e.SeriesId).HasColumnName("SeriesID");
+
                 entity.HasOne(d => d.Series)
                     .WithMany(p => p.Card)
                     .HasForeignKey(d => d.SeriesId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Card_Series");
             });
 
@@ -49,7 +50,13 @@ namespace StarWarsTradingCardCollectionAPI.Models
             {
                 entity.ToTable("Series", "Cards");
 
+                entity.Property(e => e.SeriesId)
+                    .HasColumnName("SeriesID")
+                    .HasDefaultValueSql("(newid())");
+
                 entity.Property(e => e.SeriesName).HasMaxLength(100);
+
+                entity.Property(e => e.SetId).HasColumnName("SetID");
 
                 entity.HasOne(d => d.Set)
                     .WithMany(p => p.Series)
@@ -61,6 +68,8 @@ namespace StarWarsTradingCardCollectionAPI.Models
             {
                 entity.ToTable("Set", "Cards");
 
+                entity.Property(e => e.SetId).HasDefaultValueSql("(newid())");
+
                 entity.Property(e => e.SetName)
                     .IsRequired()
                     .HasMaxLength(100);
@@ -69,6 +78,10 @@ namespace StarWarsTradingCardCollectionAPI.Models
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("User", "Users");
+
+                entity.Property(e => e.UserId)
+                    .HasColumnName("UserID")
+                    .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.EmailAddress)
                     .IsRequired()
@@ -82,20 +95,22 @@ namespace StarWarsTradingCardCollectionAPI.Models
 
             modelBuilder.Entity<UserCard>(entity =>
             {
-                entity.HasKey(e => new { e.UserId, e.CardId });
+                entity.HasNoKey();
 
                 entity.ToTable("UserCard", "Users");
 
+                entity.Property(e => e.CardId).HasColumnName("CardID");
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
                 entity.HasOne(d => d.Card)
-                    .WithMany(p => p.UserCard)
+                    .WithMany()
                     .HasForeignKey(d => d.CardId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserCard_Card");
 
                 entity.HasOne(d => d.User)
-                    .WithMany(p => p.UserCard)
+                    .WithMany()
                     .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserCard_User");
             });
 

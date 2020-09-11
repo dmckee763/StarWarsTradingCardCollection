@@ -10,7 +10,7 @@ namespace StarWarsTradingCardCollectionAPI.Models
             Series = new HashSet<Series>();
         }
 
-        public int SetId { get; set; }
+        public Guid SetId { get; set; }
         public string SetName { get; set; }
         public int? Year { get; set; }
 
