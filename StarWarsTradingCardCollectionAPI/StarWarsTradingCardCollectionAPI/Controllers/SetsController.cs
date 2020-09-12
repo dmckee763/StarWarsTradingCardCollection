@@ -29,7 +29,7 @@ namespace StarWarsTradingCardCollectionAPI.Controllers
 
         // GET: api/Sets/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Set>> GetSet(int id)
+        public async Task<ActionResult<Set>> GetSet(Guid id)
         {
             var @set = await _context.Set.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace StarWarsTradingCardCollectionAPI.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSet(int id, Set @set)
+        public async Task<IActionResult> PutSet(Guid id, Set @set)
         {
             if (id != @set.SetId)
             {
@@ -87,7 +87,7 @@ namespace StarWarsTradingCardCollectionAPI.Controllers
 
         // DELETE: api/Sets/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Set>> DeleteSet(int id)
+        public async Task<ActionResult<Set>> DeleteSet(Guid id)
         {
             var @set = await _context.Set.FindAsync(id);
             if (@set == null)
@@ -101,7 +101,7 @@ namespace StarWarsTradingCardCollectionAPI.Controllers
             return @set;
         }
 
-        private bool SetExists(int id)
+        private bool SetExists(Guid id)
         {
             return _context.Set.Any(e => e.SetId == id);
         }
