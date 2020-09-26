@@ -21,6 +21,7 @@ namespace StarWarsTradingCardCollectionAPI.Models
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserCard> UserCard { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Card>(entity =>

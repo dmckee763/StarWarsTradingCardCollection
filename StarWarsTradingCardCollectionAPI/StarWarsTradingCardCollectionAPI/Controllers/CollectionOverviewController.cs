@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using StarWarsTradingCardCollectionAPI.Models;
 
 namespace StarWarsTradingCardCollectionAPI.Controllers
@@ -22,10 +23,10 @@ namespace StarWarsTradingCardCollectionAPI.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Set>>> GetCollectionOverview()
-        {          
+        {
             var sets = await _context.Set
-               // .Include(x => x.Series)
-                    //.ThenInclude(x => x.Card)
+                .Include(x => x.Series)
+                    .ThenInclude(x => x.Card)
                 .ToListAsync();
 
             return sets;
