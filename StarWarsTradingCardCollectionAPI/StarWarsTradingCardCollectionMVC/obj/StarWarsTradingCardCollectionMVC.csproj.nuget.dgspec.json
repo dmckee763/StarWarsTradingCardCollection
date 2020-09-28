@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj": {}
+    "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj": {}
   },
   "projects": {
-    "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj": {
+    "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj",
         "projectName": "StarWarsTradingCardCollectionMVC",
-        "projectPath": "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj",
+        "projectPath": "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj",
         "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\obj\\",
+        "outputPath": "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",

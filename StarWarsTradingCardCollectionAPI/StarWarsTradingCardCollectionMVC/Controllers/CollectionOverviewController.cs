@@ -28,6 +28,8 @@ namespace StarWarsTradingCardCollectionMVC.Controllers
                     string data = await response.Content.ReadAsStringAsync();
 
                     var result = JsonConvert.DeserializeObject<List<SetIndexVM>>(data);
+
+                    return View(result);
                 }
             }
 

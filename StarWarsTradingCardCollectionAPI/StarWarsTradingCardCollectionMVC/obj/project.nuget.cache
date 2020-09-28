@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N5hDvAXCQRvORvl8zqr9zewCX2w5ffiSXbyyxViRhI0Rh+uYfgMBVMtzkZSeU9LBJFsC1q26NK/kRPpbb8aIBA==",
+  "dgSpecHash": "lso2nvZmjo30/mK0P38OAe+b0Kyj4fmkOgcN2G0RV1rftiTHM1IiYByEfhIoiBk2L1HGq3D+RpW4yF8PqNZh5A==",
   "success": true,
-  "projectFilePath": "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj",
+  "projectFilePath": "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionMVC\\StarWarsTradingCardCollectionMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

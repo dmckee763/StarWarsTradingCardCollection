@@ -1,8 +1,63 @@
-﻿
+﻿@model IEnumerable<StarWarsTradingCardCollectionMVC.ViewModels.SetIndexVM>
+
 @{
-    ViewData["Title"] = "CollectionOverview";
+    ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>CollectionOverview</h1>
+<h1>Index</h1>
 
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.SetId)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.SetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+        </tr>
+    </thead>
+
+@if (Model != null)
+{
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+        </tr>
+
+        @foreach (var series in item.Series)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => series.SeriesName)
+                </td>
+            </tr>
+
+            foreach (var card in series.Card)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => card.CardNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => card.CardName)
+                    </td>
+                </tr>
+            }
+        }
+            
+    }
+    </tbody>
+}
+</table>

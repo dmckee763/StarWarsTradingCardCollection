@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qJ43cdcLVTrJMNtzUrIwpGgi8at3NiyVsUXeJOKbmOUi0B5igZLg4rm0ch5kpIaOA1s47qg12UjghNAwu8e93A==",
+  "dgSpecHash": "GYMsWzth2wXBNuBfxYFb6N8pDjFQNKqYYSOlG5LubjkBps3i3wmiEluYn3mkZAoxF8qvhlbQ0t+vVPEv3tFQYA==",
   "success": true,
-  "projectFilePath": "D:\\Users\\David\\Documents\\Visual Studio 2019\\Projects\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionAPI.csproj",
+  "projectFilePath": "C:\\Users\\David\\Source\\Repos\\StarWarsTradingCardCollection\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionAPI\\StarWarsTradingCardCollectionAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.2\\microsoft.aspnetcore.jsonpatch.3.1.2.nupkg.sha512",

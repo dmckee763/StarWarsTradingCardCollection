@@ -7,7 +7,7 @@ namespace StarWarsTradingCardCollectionMVC.ViewModels
 {
     public class SetIndexVM
     {
-        public Guid SetId { get; set; }
+        //public Guid SetId { get; set; }
         public string SetName { get; set; }
         public int? Year { get; set; }
 
