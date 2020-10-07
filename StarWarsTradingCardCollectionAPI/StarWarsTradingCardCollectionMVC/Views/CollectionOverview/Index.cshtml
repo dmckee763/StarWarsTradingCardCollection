@@ -5,59 +5,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
-<table class="table">
-    <thead>
-        <tr>
-            @*<th>
-                @Html.DisplayNameFor(model => model.SetId)
-            </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.SetName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Year)
-            </th>
-        </tr>
-    </thead>
+<h1>Collection Overview</h1>
 
-@if (Model != null)
+@foreach (var set in Model)
 {
-<tbody>
-    @foreach (var item in Model)
+<button class="accordion">@set.SetName (@set.Year)</button>
+<div class="accordion-content">
+    @foreach (var series in set.Series)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SetName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-        </tr>
-
-        @foreach (var series in item.Series)
+    <button class="accordion">@series.SeriesName</button>
+    <div class="accordion-content">
+        @foreach (var card in series.Card)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => series.SeriesName)
-                </td>
-            </tr>
-
-            foreach (var card in series.Card)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => card.CardNo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => card.CardName)
-                    </td>
-                </tr>
-            }
+        <div class="accordion-content">
+            <p>@card.CardNo @card.CardName</p>
+        </div>
         }
-            
+    </div>
     }
-    </tbody>
+</div>
 }
-</table>
+
+<script src="~/js/Accordion.js"></script>
